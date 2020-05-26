@@ -1,0 +1,14 @@
+<h1>The Top Hits!</h1>
+<% @charts.each do |chart| %>
+<ol>
+  <li>
+    <%= link_to chart.name, chart_path(chart) %>
+  </li>
+</ol>
+<% end %>
+<br />
+<br />
+<%= link_to "Add New Chart", new_chart_path %>
+<br />
+<br />
+<%= link_to "Top Artists", artists_path %>

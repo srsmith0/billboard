@@ -1,0 +1,10 @@
+<h1><%= @artist.id ? "Edit Name" : "Add Artist"%>
+
+<h3><%= form_for [@artist] do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.submit %></h3>
+<% end %>
+
+<%= link_to "Go Back", artists_path%>

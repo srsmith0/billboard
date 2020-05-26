@@ -1,0 +1,14 @@
+<h1><%= @chart.name %></h1>
+<ol>
+<% @songs.each do |song| %>
+<li>
+Song: <%= song.title%>
+<br />
+Artist: <%= song.artist.name%>
+</li>
+<% end %>
+</ol>
+<br />
+<%= link_to "Edit Chart", edit_chart_path %>
+<br />
+<%= link_to "Go Back", charts_path %>

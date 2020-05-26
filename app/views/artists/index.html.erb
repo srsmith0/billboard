@@ -1,0 +1,13 @@
+<h1>Yesterday's Top Artists</h1>
+<% @artists.each do |artist| %>
+<ul>
+  <li>
+<%= link_to artist.name, artist_path(artist) %>
+  </li>
+</ul>
+<% end %>
+
+<%= link_to "Add Artist", new_artist_path %>
+<br />
+<br />
+<%= link_to "Go Back", charts_path %>
